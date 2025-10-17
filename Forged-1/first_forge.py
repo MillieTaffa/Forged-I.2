@@ -100,22 +100,29 @@ def get_affordable_items(data):
 # ==================================
 
 def reverse_words(sentence):
-
-    """
-    Takes a sentence string and returns it with the word order reversed.
-
-    Example:
-    --------
-    >>> reverse_words("The sky is blue")
-    'blue is sky The'
-    """
-    pass  # TODO: implement function logic here
-    case_string = input().split()
-    reverse_case_string = case_string[::-1]
+    sentence = str(input(": ")).split()
     list_of_words = []
-    list_of_words.append(case_string)
-    return list_of_words
+    new_sentence = sentence[::-1]
+    new_sentence = list_of_words.append(sentence)
+    # return reverse_list_of_words as str... this was worth a shot 😭
+
 print(reverse_words("Hello! I am breathing through the wound 😭"))
+
+
+# """
+# Takes a sentence string and returns it with the word order reversed.
+
+# Example:
+# --------
+# >>> reverse_words("The sky is blue")
+# 'blue is sky The'
+# """
+# pass  # TODO: implement function logic here
+#     case_string = input().split()
+#     reverse_case_string = case_string[::-1]
+#     list_of_words = []
+#     list_of_words.append(case_string)
+#     return list_of_words
 
 
 def count_vowels(word):
