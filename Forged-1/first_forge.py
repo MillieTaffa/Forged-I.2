@@ -4,13 +4,16 @@
 # ==================================
 
 def filter_primes(numbers):
-    list_of_int = [1,2,3,4,5,6,7,8,9,10]
-    new_list_of_int = [] #append non prime numbers in here
+    numbers = [input()]
+    list_of_int = [] #append non prime numbers in here
 
-    for num in list_of_int:
-        if num > 1 and num // num == 0:
-            new_list_of_int = list_of_int.remove(num)
-filter_primes
+    for num in numbers:
+        if num > 1 and num % num == 0:
+            numbers.remove(num)
+            list_of_int.append(numbers)
+        else:
+            break
+filter_primes(numbers=[])
         
 """
 Takes a list of integers and returns a new list
@@ -60,17 +63,27 @@ def draw_square(size):
 # ==================================
 
 def get_affordable_items(data):
+    data = [
+        {"name": "Laptop", "price": 120.0, "in_stock": True, "category": "electronics"},
+        {"name": "Book", "price": 15.0, "in_stock": False, "category": "books"},
+        {"name": "Phone", "price": 80.0, "in_stock": True, "category": "electronics"}
+        ]
+    for item in data:
+        if data["price"] <= 100.0:
+            return item
+        else:
+            break
+    for category in data:
+        if category == "name" and category == "price":
+            thingie = {"name": "price"} #for lack of better variable 😭
+            return thingie
+# get_affordable_items(data=)
     """
     Takes a list of dictionaries representing store items and
     returns a dictionary of items that are affordable (price < 100).
 
     Example:
     --------
-    >>> data = [
-    ... {"name": "Laptop", "price": 120.0, "in_stock": True, "category": "electronics"},
-    ... {"name": "Book", "price": 15.0, "in_stock": False, "category": "books"},
-    ... {"name": "Phone", "price": 80.0, "in_stock": True, "category": "electronics"}
-    ... ]
     >>> get_affordable_items(data)
     {'Book': 15.0, 'Phone': 80.0}
 
@@ -101,7 +114,7 @@ def reverse_words(sentence):
     reverse_case_string = case_string[::-1]
     list_of_words = []
     list_of_words.append(case_string)
-    return reverse_case_string
+    return list_of_words
 print(reverse_words("Hello! I am breathing through the wound 😭"))
 
 
