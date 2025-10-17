@@ -4,21 +4,31 @@
 # ==================================
 
 def filter_primes(numbers):
-    """
-    Takes a list of integers and returns a new list
-    with all prime numbers removed.
+    list_of_int = [1,2,3,4,5,6,7,8,9,10]
+    new_list_of_int = [] #append non prime numbers in here
 
-    Example:
-    --------
-    >>> filter_primes([2, 3, 4, 5, 6, 7, 8])
-    [4, 6, 8]
+    for num in list_of_int:
+        if num > 1 and num // num == 0:
+            new_list_of_int = list_of_int.remove(num)
+filter_primes
+        
+"""
+Takes a list of integers and returns a new list
+with all prime numbers removed.
 
-    Notes:
-    ------
-    - A prime number is a number greater than 1 that has no divisors other than 1 and itself.
-    - Use loop logic to determine primality (no external libraries).
-    """
-    pass  # TODO: implement function logic here
+Example:
+--------
+>>> filter_primes([2, 3, 4, 5, 6, 7, 8])
+[4, 6, 8]
+
+Notes:
+------
+- A prime number is a number greater than 1 that has no divisors other than 1 and itself.
+- Use loop logic to determine primality (no external libraries).
+
+if num > 1 and num // num == 0:
+"""
+pass  # TODO:
 
 
 # ==================================
@@ -77,6 +87,7 @@ def get_affordable_items(data):
 # ==================================
 
 def reverse_words(sentence):
+
     """
     Takes a sentence string and returns it with the word order reversed.
 
@@ -86,6 +97,12 @@ def reverse_words(sentence):
     'blue is sky The'
     """
     pass  # TODO: implement function logic here
+    case_string = input().split()
+    reverse_case_string = case_string[::-1]
+    list_of_words = []
+    list_of_words.append(case_string)
+    return reverse_case_string
+print(reverse_words("Hello! I am breathing through the wound 😭"))
 
 
 def count_vowels(word):
